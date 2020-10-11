@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+
+<head>
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>My Home</title>
+    <link rel="stylesheet" type="text/css" href="/theme-assets/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="/theme-assets/css/app-lite.css">
+    <link rel="stylesheet" type="text/css" href="/theme-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="/theme-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="/theme-assets/css/styles.css">
+    <script src="/js/jquery.min.js"></script>
+</head>
+
+<style type="text/css">
+    .clr {
+        clear: both;
+    }
+
+    .living {
+        background: blue !important;
+    }
+
+    .dinning {
+        background: red !important;
+    }
+
+    .content_fan {
+        max-height: 0;
+        overflow: hidden;
+    }
+</style>
+
+<body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click"
+    data-menu="vertical-menu" data-color="bg-gradient-x-purple-blue" data-col="2-columns">
+    <!-- fixed-top-->
+    <nav
+        class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light">
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+            </div>
+        </div>
+    </nav>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow " data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto"><a class="navbar-brand" href="index.php">
+                        <!--<img class="brand-logo" alt="Chameleon admin logo" src="theme-assets/images/logo/logo1.png"/>-->
+                        <h3 class="brand-text" style="color: black;">Le Ngoc Tam Hai Van</h3>
+                    </a></li>
+                <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+            </ul>
+        </div>
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class="active"><a href="index.php" class=""><img src="/theme-assets/images/icons/iconhome.png"
+                            width="20%" /><span class="menu-title" data-i18n="">Living Room</span></a>
+                </li>
+                <!-- <li class="active"><a class="" href="diningroom.php?active=dinning"><img src="theme-assets\images\ico\iconhome.png" width="20%" /></i><span class="menu-title" data-i18n="">Dining-room</span></a></li>-->
+            </ul>
+        </div>
+        <div class="navigation-background"></div>
+    </div>
+    <div class="app-content content">
+
+
+        <div style="padding: 0px 10px">
+
+            <div class="content-wrapper">
+                <div class="content-wrapper-before"></div>
+                <div class="content-header row">
+                    <div class="content-header-left col-md-4 col-12 mb-2">
+                        <h3 class="content-header-title">Living Room</h3>
+                    </div>
+                </div>
+
+
+                <!-- Pie charts section start -->
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title" style="margin-top: 10px">Face Recognition</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                            </div>
+                            <div class="card-content collapse show" style="background-color: white;">
+                                <div class="card-body">
+                                    <div class="video-container">
+                                        <video id="video" width="720" height="560"></video>
+                                        <canvas id="canvas"></canvas>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <center><label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label></center>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--end equiment-->
+                    <!--begin Equiment-->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Đèn trong nhà</h4>
+                            </div>
+                            <div class="card-content collapse show" style="background-color: white;">
+                                <div class="card-body">
+
+                                    <img class="light" id="lignt" src="theme-assets/images/icons/light0.png"
+                                        alter="light" />
+
+
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <center><label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label></center>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Đèn ngoài hiên</h4>
+                            </div>
+                            <div class="card-content collapse show" style="background-color: white;">
+                                <div class="card-body">
+
+                                    <img class="light" id="lignt" src="theme-assets/images/icons/light0.png"
+                                        alter="light" />
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <center><label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Pie charts section end -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+
+    <footer class="footer footer-static footer-light navbar-border navbar-shadow">
+        <div>Bài tập lớn học phần CDCNTT18C</div>
+        <div class="background: red; width: 80px; height: 80px" id="nd">...</div>
+    </footer>
+    <script src="/theme-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+    <script src="/theme-assets/js/core/app-menu-lite.js" type="text/javascript"></script>
+    <script src="/theme-assets/js/core/app-lite.js" type="text/javascript"></script>
+    <script src="/js/index.js" type="module"></script>
+    <script defer src="/face-api.min.js"></script>
+    <script defer src="/face-recognition.js"></script>
+</body>
+
+</html>

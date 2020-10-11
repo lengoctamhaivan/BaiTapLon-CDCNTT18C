@@ -1,0 +1,24 @@
+{
+  "name": "nhathongminh",
+  "version": "1.0.0",
+  "description": "Bai tap lon CDCNTT18C",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app"
+  },
+  "author": "Le Ngoc Tam Hai Van",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^2.5.0",
+    "body-parser": "^1.19.0",
+    "canvas": "^2.6.1",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "face-api.js": "^0.22.2",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
