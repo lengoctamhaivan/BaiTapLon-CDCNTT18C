@@ -27,11 +27,51 @@ app.get('/', (req, res) => {
 })
 
 io.on('connection', socket => {
-	socket.on('connect', () => {
-		console.log("Hello!")
+	console.log('New client')
+	io.emit('test')
+	// Light indoor
+	socket.on('turnOnLight1', () => {
+		io.emit('client-LED_IN_DOOR-ON')
 	})
-	socket.on('turnOnLight1', () => { })
-	socket.on('turnOnLight2', () => { })
+	socket.on('turnOffLight1', () => {
+		io.emit('client-LED_IN_DOOR-OFF')
+	})
+	// Light outdoor
+	socket.on('turnOnLight2', () => {
+		io.emit('client-LED_OUT_DOOR-ON')
+	})
+	socket.on('turnOffLight2', () => {
+		io.emit('client-LED_OUT_DOOR-OFF')
+	})
+	// indoor
+	socket.on('openDoor', () => {
+		io.emit('client-DOOR-OPEN')
+	})
+	socket.on('closeDoor', () => {
+		io.emit('client-DOOR-CLOSE')
+	})
+
+	// Light indoor
+	socket.on('LED_IN_DOOR-OFF', () => {
+		io.emit('device-LED_IN_DOOR-OFF')
+	})
+	socket.on('LED_IN_DOOR-ON', () => {
+		io.emit('device-LED_IN_DOOR-ON')
+	})
+	// Light outdoor
+	socket.on('LED_OUT_DOOR-OFF', () => {
+		io.emit('device-LED_OUT_DOOR-OFF')
+	})
+	socket.on('LED_OUT_DOOR-ON', () => {
+		io.emit('device-LED_OUT_DOOR-ON')
+	})
+	// indoor
+	socket.on('DOOR-OPEN', () => {
+		io.emit('device-DOOR-OPEN')
+	})
+	socket.on('DOOR-CLOSE', () => {
+		io.emit('device-DOOR-CLOSE')
+	})
 })
 
 server.listen(8080, '0.0.0.0', () => {
